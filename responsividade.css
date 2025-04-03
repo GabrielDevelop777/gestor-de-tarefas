@@ -1,0 +1,250 @@
+/* Estilos base para tarefas concluídas */
+.task-item.completed {
+    background-color: rgba(76, 175, 80, 0.1);
+    border-left: 3px solid #4CAF50;
+}
+
+.task-item.completed .task-title {
+    text-decoration: line-through;
+    color: #666;
+}
+
+/* Checkbox personalizado para indicar conclusão */
+.task-item .completion-checkbox {
+    margin-right: 10px;
+}
+
+.task-item.completed .completion-checkbox {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+.task-item.completed .completion-checkbox::after {
+    content: '✓';
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 10px;
+}
+
+/* Desktop grande (padrão) */
+/* Os estilos base são aplicados aqui */
+
+/* Desktop médio e pequeno */
+@media (max-width: 1200px) {
+    .app-container {
+        width: 95%;
+    }
+
+    .stat-item {
+        padding: 5px 25px;
+        font-size: 16px;
+    }
+}
+
+/* Tablets e dispositivos médios */
+@media (max-width: 992px) {
+    .app-header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .stats {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .stat-item {
+        padding: 5px 15px;
+        font-size: 15px;
+    }
+
+    .input-group {
+        grid-template-columns: 1fr;
+    }
+
+    .input-full {
+        grid-column: 1;
+    }
+
+    .task-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .task-actions {
+        margin-top: 10px;
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    /* Estilo para item verificado em dispositivos médios */
+    .task-item.completed .task-title::after {
+        content: " (Verificado)";
+        color: #4CAF50;
+        font-size: 14px;
+        margin-left: 5px;
+    }
+}
+
+/* Tablets pequenos e dispositivos maiores que celulares */
+@media (max-width: 768px) {
+    .app-container {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .app-title {
+        font-size: 20px;
+    }
+
+    .stats {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .stat-item {
+        flex: 1 0 45%;
+        text-align: center;
+        font-size: 14px;
+    }
+
+    .task-details {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .task-filters {
+        justify-content: center;
+    }
+
+    .filter-btn {
+        padding: 6px 10px;
+        font-size: 12px;
+    }
+
+    body {
+        padding: 0;
+        padding-bottom: 50px;
+    }
+
+    /* Footer responsivo */
+    .footer-container {
+        padding: 15px 10px 10px;
+    }
+
+    .footer-column h4 {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .footer-bottom {
+        padding: 10px 0;
+        font-size: 12px;
+    }
+
+    /* Estilo para item verificado em tablets */
+    .task-item.completed .task-title::after {
+        content: " (Verificado)";
+        color: #4CAF50;
+        font-size: 13px;
+    }
+}
+
+/* Celulares e dispositivos pequenos */
+@media (max-width: 576px) {
+    .app-body {
+        padding: 15px 10px;
+    }
+
+    .app-header {
+        padding: 40px 10px;
+    }
+
+    .task-title {
+        font-size: 16px;
+    }
+
+    .btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .task-item {
+        padding: 12px 10px;
+        /* Corrigido o valor negativo que estava -100px */
+    }
+
+    .task-actions {
+        flex-wrap: wrap;
+        gap: 5px;
+    }
+
+    .task-content {
+        margin-top: 10px;
+    }
+
+    .social-network {
+        margin-left: -3.5rem;
+        width: 2rem;
+        margin-top: -25rem;
+    }
+
+    .circle {
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .line {
+        height: 7rem;
+    }
+
+    .social-links {
+        gap: 0.75rem;
+    }
+
+    .social-links a {
+        font-size: 0.875rem;
+    }
+
+    /* Estilo para item verificado em dispositivos móveis */
+    .task-item.completed .task-title::after {
+        content: " ✓";
+        color: #4CAF50;
+        font-weight: bold;
+        font-size: 14px;
+        margin-left: 5px;
+    }
+}
+
+/* Celulares muito pequenos */
+@media (max-width: 375px) {
+    .stat-item {
+        padding: 4px 8px;
+        font-size: 12px;
+        flex: 1 0 100%;
+        margin-bottom: 5px;
+    }
+
+    .stats {
+        flex-direction: column;
+    }
+
+    .task-actions .action-btn {
+        width: 28px;
+        height: 28px;
+    }
+
+    .main-container {
+        margin-top: -15rem;
+    }
+
+    /* Verificação em dispositivos muito pequenos */
+    .task-item.completed .task-title::after {
+        content: " ✓";
+        color: #4CAF50;
+        font-size: 12px;
+    }
+}

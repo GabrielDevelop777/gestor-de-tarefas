@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestão de Tarefas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsividade.css">
+    <link rel="icon" type="image/png" href="./assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+</head>
+
+<body>
+
+
+    <div class="app-container">
+        <div class="app-header">
+            <div class="app-title">
+                <i class="fas fa-tasks"></i> Gestão de Tarefas
+            </div>
+            <div class="stats">
+                <div class="stat-item"><span id="pending-count">0</span> Pendentes 🕔</div>
+                <div class="stat-item"><span id="completed-count">0</span> Concluídas ✔️</div>
+            </div>
+        </div>
+
+        <div class="app-body">
+            <form id="task-form">
+                <div class="input-group">
+                    <input type="text" id="task-title" placeholder="Título da tarefa" required>
+                    <select id="task-priority">
+                        <option value="high">Alta Prioridade</option>
+                        <option value="medium" selected>Média Prioridade</option>
+                        <option value="low">Baixa Prioridade</option>
+                    </select>
+                    <input type="date" id="task-date">
+                    <select id="task-category">
+                        <option value="Trabalho">Trabalho</option>
+                        <option value="Estudo">Estudo</option>
+                        <option value="Compras">Compras</option>
+                        <option value="Outros">Outros</option>
+                    </select>
+                    <textarea id="task-description" class="input-full"
+                        placeholder="Descrição da tarefa (opcional)"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">
+                    <i class="fas fa-plus"></i> Adicionar Tarefa
+                </button>
+            </form>
+
+            <div class="tasks-container">
+                <div class="task-filters">
+                    <button class="filter-btn active" data-filter="all">Todas</button>
+                    <button class="filter-btn" data-filter="pending">Pendentes</button>
+                    <button class="filter-btn" data-filter="completed">Concluídas</button>
+                    <button class="filter-btn" data-filter="high">Alta Prioridade</button>
+                    <button class="filter-btn" data-filter="today">Para Hoje</button>
+                </div>
+
+                <div id="tasks-list"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <div class="detail">
+            <div class="social-network">
+                <div class="line"></div>
+
+                <a href="http://www.linkedin.com/in/gabriel-alexandre-silva/" target="_blank">
+                    <div class="circle">
+                        <img src="./assets/linkedin.svg" alt="logo do linkedin">
+                    </div>
+                </a>
+
+                <a href="https://github.com/GabrielDevelop777" target="_blank">
+                    <div class="circle">
+                        <img src="./assets/github.svg" alt="logo do github">
+                    </div>
+                </a>
+
+                <a href="mailto:gabrielalexok@gmail.com">
+                    <div class="circle">
+                        <img src="./assets/gmail.svg" alt="logo do gmail">
+                    </div>
+                </a>
+            </div>
+
+            <footer class="footer">
+                <!-- <div class="footer-container">
+            <div class="footer-row">
+                <div class="footer-column">
+                    <h4>Gestão de Tarefas</h4>
+                    <p>Sistema simples e eficiente para organização das suas atividades diárias.</p>
+                </div>
+                <div class="footer-column">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a target="_blank" href="https://portfolio-gabriel-alexandre.netlify.app/"><i
+                                    class="fas fa-home"></i>
+                                Início</a></li>
+                        <li><a target="_blank" href="https://support.google.com/?hl=pt-BR"><i
+                                    class="fas fa-question-circle"></i>
+                                Ajuda</a></li>
+                        <li><a href="#"><i class="fas fa-cog"></i> Configurações</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-envelope"></i> gabrielalexok@gmail.com</p>
+                    <div class="social-links">
+                        <a target="_blank" href="https://github.com/GabrielDevelop777"><i class="fab fa-github"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/gabriel-alexandre-silva/"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/gaab_9/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+                <div class="footer-bottom">
+                    <p>&copy; 2025 Sistema de Gestão de Tarefas | Todos os direitos reservados</p>
+                </div>
+            </footer>
+
+</body>
+<script src="./scripts.js"></script>
+
+</html>
